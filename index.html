@@ -7,428 +7,591 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rijuana - Developer Portfolio</title>
+    <title>Rijuana - Portfolio</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        body {
-            background-color: rgb(0, 0, 33);
-            color: white;
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Navigation */
-        nav {
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: #ededed;
+            background-color: #081b29;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+
+            background: transparent;
+
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            height: 80px;
-            background-color: rgb(18, 18, 62);
+
+            z-index: 100;
         }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
+        /* LOGO */
 
-        nav ul li a {
+        .logo {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 25px;
             text-decoration: none;
-            color: white;
+        }
+
+
+        /* NAVIGATION */
+
+        .navbar a {
+            display: inline-block;
+
+            font-size: 18px;
+            margin-left: 35px;
+
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            font-weight: 500;
+
             transition: 0.3s;
         }
 
-        nav ul li a:hover {
-            color: rgb(192, 192, 236);
-            font-size: 1.04rem;
+        .navbar a:hover {
+            color: #0ef;
         }
 
-        /* Main */
-        main hr {
-            margin: 60px 84px;
-            height: 1.2px;
-            background-color: #9c97f1;
-            border: 0;
-        }
 
-        .left {
-            font-size: 1.5rem;
-        }
+        /* =========================
+           HOME SECTION
+        ========================= */
 
-        /* First Section */
-        .firstSection {
+        .home {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            margin: 130px 0;
+
+            background: url("Purple illustrated Mountain Desktop Wallpaper.jpg") no-repeat;
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 70px 10% 0;
         }
 
-        .firstSection > div {
-            width: 30%;
+
+        /* HOME TEXT */
+
+        .home-content {
+            max-width: 600px;
         }
 
-        .leftSection {
-            font-size: 3rem;
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 700;
         }
 
-        .rightSection img {
-            width: 80%;
-            display: block;
+        .home-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+
+            margin: -3px 0;
         }
+
+        .home-content p {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+
+        /* PURPLE TEXT */
 
         .purple {
-            color: rgb(185, 134, 234);
+            color: #b986ea;
         }
 
-        .text-gray {
+
+        /* =========================
+           EXPERIENCES
+        ========================= */
+
+        .experience {
+            padding: 100px 10%;
+            background-color: rgb(0, 0, 33);
+
+            min-height: 500px;
+        }
+
+        .experience > span {
             color: gray;
+            font-size: 15px;
         }
 
-        #element {
-            color: rgb(185, 134, 234);
-        }
-
-        /* Experience Section */
-        .secondSection {
-            max-width: 80vw;
-            margin: 0 auto;
-            min-height: 400px;
-        }
-
-        .secondSection h1 {
-            font-size: 1.9rem;
+        .experience h1 {
+            font-size: 40px;
             margin-top: 10px;
+            margin-bottom: 80px;
         }
 
-        .secondSection .box {
-            background-color: white;
-            width: 80vw;
-            height: 2px;
-            margin: 80px 0;
+
+        /* EXPERIENCE BOX */
+
+        .experience-box {
             display: flex;
+            justify-content: space-between;
+            position: relative;
         }
 
-        .secondSection .vertical {
-            height: 93px;
-            width: 1px;
+
+        /* HORIZONTAL LINE */
+
+        .experience-box::before {
+            content: "";
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 2px;
+
             background-color: white;
-            margin: 0 120px;
-            position: relative;
         }
 
-        .image-top {
-            width: 23px;
+
+        /* EXPERIENCE ITEM */
+
+        .experience-item {
+            width: 22%;
             position: relative;
-            top: -32px;
-            left: -9px;
+
+            padding-top: 35px;
         }
 
-        .vertical-title {
-            position: relative;
-            top: 55px;
-            width: 150px;
-            font-size: 14px;
-            font-weight: 500;
+
+        /* SMALL CIRCLE */
+
+        .experience-item::before {
+            content: "";
+
+            position: absolute;
+
+            top: -6px;
+            left: 0;
+
+            width: 12px;
+            height: 12px;
+
+            background-color: #b986ea;
+
+            border-radius: 50%;
         }
 
-        .vertical-desc {
+        .experience-item h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
             color: gray;
-            position: relative;
-            top: 65px;
-            width: 150px;
-            font-size: 10px;
+            font-size: 12px;
+            line-height: 1.6;
         }
 
-        /* Footer */
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background-color: rgb(172, 172, 229);
+
             min-height: 200px;
-            margin-top: 80px;
+
+            color: #111;
         }
 
         .footer {
             display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
+
+            padding: 40px 10%;
+
+            justify-content: space-between;
+        }
+
+        .footer h3 {
+            font-size: 20px;
         }
 
         .footer ul {
             list-style: none;
         }
 
-        .footer > div {
-            width: 123px;
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer ul li a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            color: #fff;
         }
 
         .footer-rights {
             text-align: center;
-            padding: 12px 0;
+
+            padding: 15px 0;
+
             font-size: 13px;
+
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
         }
 
-        /* Mobile Responsive */
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
         @media (max-width: 800px) {
 
-            nav {
-                flex-direction: column;
-                height: auto;
+            .header {
                 padding: 20px;
+                flex-direction: column;
                 gap: 15px;
             }
 
-            nav ul {
-                flex-wrap: wrap;
+            .navbar a {
+                font-size: 14px;
+                margin-left: 10px;
             }
 
-            nav ul li {
-                margin: 5px 10px;
-            }
-
-            .firstSection {
-                flex-direction: column;
-                margin: 80px 0;
+            .home {
+                justify-content: center;
                 text-align: center;
+                padding: 100px 20px 0;
             }
 
-            .firstSection > div {
-                width: 80%;
+            .home-content h3 {
+                font-size: 24px;
             }
 
-            .leftSection {
-                font-size: 2rem;
+            .home-content h1 {
+                font-size: 40px;
             }
 
-            .rightSection {
-                margin-top: 40px;
+            .home-content p {
+                font-size: 18px;
             }
 
-            .rightSection img {
-                width: 100%;
+            .experience {
+                padding: 80px 10%;
             }
 
-            .secondSection {
-                width: 90vw;
-                max-width: 90vw;
+            .experience h1 {
+                font-size: 32px;
+                margin-bottom: 50px;
             }
 
-            .secondSection .box {
-                width: 100%;
+            .experience-box {
                 flex-direction: column;
-                height: auto;
-                background: none;
+                gap: 50px;
             }
 
-            .secondSection .vertical {
-                margin: 40px auto;
+            .experience-box::before {
+                width: 2px;
+                height: 100%;
+                left: 5px;
+                top: 0;
+            }
+
+            .experience-item {
+                width: 100%;
+                padding-left: 30px;
+                padding-top: 0;
+            }
+
+            .experience-item::before {
+                left: 0;
+                top: 5px;
             }
 
             .footer {
                 flex-wrap: wrap;
-                padding: 30px;
                 gap: 30px;
+                padding: 30px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- Header -->
-    <header>
-        <nav>
 
-            <div class="left">
-                Rijuana's Portfolio
-            </div>
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-            <div class="right">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+    <header class="header">
+
+        <a href="#home" class="logo">
+            Rijuana's Portfolio
+        </a>
+
+        <nav class="navbar">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#contact">Contact</a>
 
         </nav>
+
     </header>
 
-    <main>
 
-        <!-- First Section -->
-        <section class="firstSection" id="home">
+    <!-- =========================
+         HOME
+    ========================= -->
 
-            <div class="leftSection">
+    <section class="home" id="home">
 
-                Hi, I'm <span class="purple">Rijuana</span>
+        <div class="home-content">
 
-                <div>
-                    And I'm a developer
-                </div>
+            <h3>
+                Hi, I'm
+            </h3>
 
-                <span id="element"></span>
+            <h1>
+                <span class="purple">Rijuana</span>
+            </h1>
 
-            </div>
+            <p>
+                I'm a student.
+            </p>
 
-            <div class="rightSection">
-                <!-- Add your photo here -->
-                <img src="png photo.jpg" alt="Rijuana">
-            </div>
+        </div>
 
-        </section>
+    </section>
 
-        <hr>
 
-        <!-- Experience Section -->
-        <section class="secondSection" id="about">
+    <!-- =========================
+         EXPERIENCES
+    ========================= -->
 
-            <span class="text-gray">
-                What I have done so far
-            </span>
+    <section class="experience" id="about">
 
-            <h1>Past Experience</h1>
+        <span>
+            What I have done so far
+        </span>
 
-            <div class="box">
+        <h1>
+            Experiences
+        </h1>
 
-                <!-- Experience 1 -->
-                <div class="vertical">
 
-                    <img class="image-top" src="png photo.jpg" alt="Graduation">
+        <div class="experience-box">
 
-                    <div class="vertical-title">
-                        Graduation (2021-2024)
-                    </div>
 
-                    <div class="vertical-desc">
-                        Completed my graduation from SNU University with a degree in Computer Science.
-                    </div>
+            <!-- EXPERIENCE 1 -->
 
-                </div>
+            <div class="experience-item">
 
-                <!-- Experience 2 -->
-                <div class="vertical">
+                <h2>
+                    Graduation
+                </h2>
 
-                    <img class="image-top" src="png photo.jpg" alt="HTML Developer">
+                <p>
+                    Graduation (2021-2024)
+                </p>
 
-                    <div class="vertical-title">
-                        HTML Developer (2010-2012)
-                    </div>
-
-                    <div class="vertical-desc">
-                        Worked on website development using HTML, CSS and JavaScript.
-                    </div>
-
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="vertical">
-
-                    <img class="image-top" src="png photo.jpg" alt="Node.js Developer">
-
-                    <div class="vertical-title">
-                        Node.js Developer (2012-2014)
-                    </div>
-
-                    <div class="vertical-desc">
-                        Developed backend applications using Node.js and modern web technologies.
-                    </div>
-
-                </div>
-
-                <!-- Experience 4 -->
-                <div class="vertical">
-
-                    <img class="image-top" src="png photo.jpg" alt="Web Developer">
-
-                    <div class="vertical-title">
-                        Web Developer
-                    </div>
-
-                    <div class="vertical-desc">
-                        Built responsive and user-friendly websites using modern development tools.
-                    </div>
-
-                </div>
+                <p>
+                    Completed my graduation from SNU University with a degree in Accounting and Finance.
+                </p>
 
             </div>
 
-        </section>
 
-    </main>
+            <!-- EXPERIENCE 2 -->
 
-    <!-- Footer -->
+            <div class="experience-item">
+
+                <h2>
+                    Post Graduation
+                </h2>
+
+                <p>
+                   currently pursuing M.C.A degree
+                </p>
+
+                <p>
+                    From SRM Institute of Science and Technology
+                </p>
+
+            </div>
+
+
+            <!-- EXPERIENCE 3 -->
+
+            <div class="experience-item">
+
+                <h2>
+                    Internship
+                </h2>
+
+                <p>
+                    working as a Software Intern in Nexova Techwork Pvt.
+                </p>
+
+                <p>
+                    Developed backend applications using Node.js and modern web technologies.
+                </p>
+
+            </div>
+
+
+            <!-- EXPERIENCE 4 -->
+
+            <div class="experience-item">
+
+                <h2>
+                    Web Developer
+                </h2>
+
+                <p>
+                    Web Developer
+                </p>
+
+                <p>
+                    Built responsive and user-friendly websites using modern development tools.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer id="contact">
 
         <div class="footer">
 
+
             <div class="footer-first">
-                <h3>Rijuana's Portfolio</h3>
+
+                <h3>
+                    Rijuana's Portfolio
+                </h3>
+
             </div>
+
 
             <div class="footer-second">
+
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
                 </ul>
+
             </div>
+
 
             <div class="footer-third">
+
                 <ul>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
                 </ul>
+
             </div>
 
-            <div class="footer-fourth">
-                <ul>
-                    <li>GitHub</li>
-                    <li>LinkedIn</li>
-                    <li>Email</li>
-                </ul>
-            </div>
 
         </div>
 
+
         <div class="footer-rights">
-            <p>© 2026 Rijuana Hossain. All rights reserved.</p>
+
+            <p>
+                © 2026 Rijuana Hossain. All rights reserved.
+            </p>
+
         </div>
 
     </footer>
 
-    <!-- Typed.js -->
-    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-
-    <script>
-        var typed = new Typed('#element', {
-            strings: [
-                "I'm a student.",
-                "I'm pursuing my master's degree.",
-                "I'm a developer."
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true
-        });
-    </script>
 
 </body>
 

@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,16 +6,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Rijuana - Developer Portfolio</title>
+
+    <title>Rijuana - Developer Portfolio</title>
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -23,6 +28,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Navigation */
         nav {
             display: flex;
             justify-content: space-around;
@@ -34,6 +40,7 @@
         nav ul {
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         nav ul li {
@@ -44,12 +51,15 @@
         nav ul li a {
             text-decoration: none;
             color: white;
+            transition: 0.3s;
         }
 
         nav ul li a:hover {
-            color: rgb(192, 192, 236) font-size: 1.04rem;
+            color: rgb(192, 192, 236);
+            font-size: 1.04rem;
         }
 
+        /* Main */
         main hr {
             margin: 60px 84px;
             height: 1.2px;
@@ -61,16 +71,16 @@
             font-size: 1.5rem;
         }
 
+        /* First Section */
         .firstSection {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin-top: 130px 0;
-
+            margin: 130px 0;
         }
 
-        .firstSection>div {
-            width: 30%
+        .firstSection > div {
+            width: 30%;
         }
 
         .leftSection {
@@ -79,6 +89,7 @@
 
         .rightSection img {
             width: 80%;
+            display: block;
         }
 
         .purple {
@@ -93,21 +104,23 @@
             color: rgb(185, 134, 234);
         }
 
+        /* Experience Section */
         .secondSection {
             max-width: 80vw;
             margin: 0 auto;
-            height: 8px;
+            min-height: 400px;
         }
 
         .secondSection h1 {
             font-size: 1.9rem;
+            margin-top: 10px;
         }
 
         .secondSection .box {
             background-color: white;
             width: 80vw;
             height: 2px;
-            margin: 56px 0;
+            margin: 80px 0;
             display: flex;
         }
 
@@ -116,6 +129,7 @@
             width: 1px;
             background-color: white;
             margin: 0 120px;
+            position: relative;
         }
 
         .image-top {
@@ -125,24 +139,27 @@
             left: -9px;
         }
 
-        .vertical.title {
+        .vertical-title {
             position: relative;
-            top: -75px;
+            top: 55px;
             width: 150px;
-
+            font-size: 14px;
+            font-weight: 500;
         }
 
         .vertical-desc {
             color: gray;
             position: relative;
-            top: -86px;
+            top: 65px;
             width: 150px;
-            font-size: 9px;
+            font-size: 10px;
         }
+
+        /* Footer */
         footer {
             background-color: rgb(172, 172, 229);
-            height: 200px;
-
+            min-height: 200px;
+            margin-top: 80px;
         }
 
         .footer {
@@ -155,7 +172,7 @@
             list-style: none;
         }
 
-        .footer >div {
+        .footer > div {
             width: 123px;
         }
 
@@ -164,118 +181,256 @@
             padding: 12px 0;
             font-size: 13px;
         }
+
+        /* Mobile Responsive */
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .firstSection {
+                flex-direction: column;
+                margin: 80px 0;
+                text-align: center;
+            }
+
+            .firstSection > div {
+                width: 80%;
+            }
+
+            .leftSection {
+                font-size: 2rem;
+            }
+
+            .rightSection {
+                margin-top: 40px;
+            }
+
+            .rightSection img {
+                width: 100%;
+            }
+
+            .secondSection {
+                width: 90vw;
+                max-width: 90vw;
+            }
+
+            .secondSection .box {
+                width: 100%;
+                flex-direction: column;
+                height: auto;
+                background: none;
+            }
+
+            .secondSection .vertical {
+                margin: 40px auto;
+            }
+
+            .footer {
+                flex-wrap: wrap;
+                padding: 30px;
+                gap: 30px;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
         <nav>
-            <div class="left">Rijuana's Portfolio</div>
+
+            <div class="left">
+                Rijuana's Portfolio
+            </div>
+
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+
         </nav>
     </header>
 
     <main>
-        <section class="firstSection">
+
+        <!-- First Section -->
+        <section class="firstSection" id="home">
+
             <div class="leftSection">
-                Hi I m <span class="purple"> Rijuana</span>
 
-                <div>And I m a developer</div>
+                Hi, I'm <span class="purple">Rijuana</span>
+
+                <div>
+                    And I'm a developer
+                </div>
+
                 <span id="element"></span>
+
             </div>
+
             <div class="rightSection">
-                <img src="" alt="">
+                <!-- Add your photo here -->
+                <img src="png photo.jpg" alt="Rijuana">
             </div>
-        </section>
-        <hr>
-        <section class="secondSection">
-            <span class="= text-gray">What i have done so far </span>
-            <h1>Past Experience</h1>
-            <div class="box">
-                <div class="vertical">
-                    <img class="image top" src="png photo.jpg" alt="">
-                    <div class="vertical title">
-                        Graduation(2021-2024)
-                    </div>
-                    <div class="vertical-desc">
-                        Completed my graduation from SNU University with a degree in Computer Science.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="png photo.jpg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer(2010-2012)
-                    </div>
-                    <div class="vertical-desc">
-                        Completed my graduation from SNU University with a degree in Computer Science.
-                    </div>
-                </div>
-                <div class="vertical">
-                    Node.js Developer (2012-2014)
-                </div>
-                <div class="vertical"> 
-                     <div class="vertical">
-                    <img class="image-top" src="png photo.jpg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer(2010-2012)
-                    </div>
-                     </div>
-                    <div class="vertical-desc">
-                        Completed my graduation from SNU University with a degree in Computer Science.
-                    </div>
-                </div>
 
         </section>
+
+        <hr>
+
+        <!-- Experience Section -->
+        <section class="secondSection" id="about">
+
+            <span class="text-gray">
+                What I have done so far
+            </span>
+
+            <h1>Past Experience</h1>
+
+            <div class="box">
+
+                <!-- Experience 1 -->
+                <div class="vertical">
+
+                    <img class="image-top" src="png photo.jpg" alt="Graduation">
+
+                    <div class="vertical-title">
+                        Graduation (2021-2024)
+                    </div>
+
+                    <div class="vertical-desc">
+                        Completed my graduation from SNU University with a degree in Computer Science.
+                    </div>
+
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="vertical">
+
+                    <img class="image-top" src="png photo.jpg" alt="HTML Developer">
+
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+
+                    <div class="vertical-desc">
+                        Worked on website development using HTML, CSS and JavaScript.
+                    </div>
+
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="vertical">
+
+                    <img class="image-top" src="png photo.jpg" alt="Node.js Developer">
+
+                    <div class="vertical-title">
+                        Node.js Developer (2012-2014)
+                    </div>
+
+                    <div class="vertical-desc">
+                        Developed backend applications using Node.js and modern web technologies.
+                    </div>
+
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="vertical">
+
+                    <img class="image-top" src="png photo.jpg" alt="Web Developer">
+
+                    <div class="vertical-title">
+                        Web Developer
+                    </div>
+
+                    <div class="vertical-desc">
+                        Built responsive and user-friendly websites using modern development tools.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer id="contact">
+
         <div class="footer">
-           <div class="footer-first">
-            <h3>Rijuana's Portfolio</h3>
-           </div>
-           <div class="footer-second">
-<ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-</ul>
-           </div>
-           <div class="footer-third">
-            <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-</ul>
-           </div>
-           <div class="fourth">
-<ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-</ul>
-           </div>
+
+            <div class="footer-first">
+                <h3>Rijuana's Portfolio</h3>
+            </div>
+
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="footer-third">
+                <ul>
+                    <li>Services</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="footer-fourth">
+                <ul>
+                    <li>GitHub</li>
+                    <li>LinkedIn</li>
+                    <li>Email</li>
+                </ul>
+            </div>
 
         </div>
+
         <div class="footer-rights">
-            <p>© 2024 Rijuana Hossain. All rights reserved.</p>
+            <p>© 2026 Rijuana Hossain. All rights reserved.</p>
         </div>
+
     </footer>
 
+    <!-- Typed.js -->
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
     <script>
         var typed = new Typed('#element', {
-            strings: ['I m a student.', 'pursuing my master degree'],
+            strings: [
+                "I'm a student.",
+                "I'm pursuing my master's degree.",
+                "I'm a developer."
+            ],
             typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
         });
     </script>
+
 </body>
 
 </html>
+```

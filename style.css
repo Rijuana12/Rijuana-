@@ -1,66 +1,693 @@
-```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-    color: #ededed;
-    background-color: #081b29;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
+    <title>Rijuana - Portfolio</title>
 
-.logo {
-    position: relative;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 25px;
-    text-decoration: none;
-}
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.navbar a {
-    display: inline-block;
-    font-size: 18px;
-    margin-left: 35px;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: 0.3s;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-.navbar a:hover {
-    color: #0ef;
-}
+    <style>
 
-.home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+        /* =========================
+           GENERAL
+        ========================= */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    background: url("Purple illustrated Mountain Desktop Wallpaper.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
+        html {
+            scroll-behavior: smooth;
+        }
 
-    padding: 70px 10% 0;
-}
-```
+        body {
+            color: #ededed;
+            background-color: #081b29;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            padding: 20px 100px;
+
+            background: transparent;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            z-index: 100;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+
+        /* NAVIGATION */
+
+        .navbar a {
+            display: inline-block;
+
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            font-size: 18px;
+            font-weight: 500;
+
+            margin-left: 35px;
+
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #0ef;
+        }
+
+
+        /* =========================
+           HOME
+        ========================= */
+
+        .home {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 70px 10% 0;
+
+            background: url("Purple illustrated Mountain Desktop Wallpaper.jpg")
+                no-repeat;
+
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* HOME CONTENT */
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin: -3px 0;
+        }
+
+        .home-content p {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+
+        /* =========================
+           HOME IMAGE
+        ========================= */
+
+        .home-img {
+            width: 400px;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-shrink: 0;
+        }
+
+        .home-img img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid #b986ea;
+
+            box-shadow: 0 0 30px rgba(185, 134, 234, 0.5);
+        }
+
+
+        /* =========================
+           PURPLE TEXT
+        ========================= */
+
+        .purple {
+            color: #b986ea;
+        }
+
+
+        /* =========================
+           EXPERIENCES
+        ========================= */
+
+        .experience {
+            padding: 100px 10%;
+            min-height: 500px;
+
+            background-color: rgb(0, 0, 33);
+        }
+
+        .experience > span {
+            color: gray;
+            font-size: 15px;
+        }
+
+        .experience h1 {
+            font-size: 40px;
+            margin-top: 10px;
+            margin-bottom: 80px;
+        }
+
+
+        /* EXPERIENCE BOX */
+
+        .experience-box {
+            position: relative;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        /* HORIZONTAL LINE */
+
+        .experience-box::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 2px;
+
+            background-color: white;
+        }
+
+
+        /* EXPERIENCE ITEM */
+
+        .experience-item {
+            position: relative;
+
+            width: 22%;
+            padding-top: 35px;
+        }
+
+
+        /* CIRCLE */
+
+        .experience-item::before {
+            content: "";
+
+            position: absolute;
+
+            top: -6px;
+            left: 0;
+
+            width: 12px;
+            height: 12px;
+
+            border-radius: 50%;
+
+            background-color: #b986ea;
+        }
+
+
+        /* EXPERIENCE TITLE */
+
+        .experience-item h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+
+        /* EXPERIENCE TEXT */
+
+        .experience-item p {
+            color: gray;
+
+            font-size: 12px;
+            line-height: 1.6;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            min-height: 200px;
+
+            background-color: rgb(172, 172, 229);
+
+            color: #111;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 40px 10%;
+        }
+
+        .footer h3 {
+            font-size: 20px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer ul li a {
+            color: #111;
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: white;
+        }
+
+        .footer-rights {
+            text-align: center;
+
+            padding: 15px 0;
+
+            font-size: 13px;
+
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .header {
+                padding: 20px;
+
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .navbar {
+                text-align: center;
+            }
+
+            .navbar a {
+                font-size: 13px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+
+            /* HOME */
+
+            .home {
+                flex-direction: column;
+
+                justify-content: center;
+
+                text-align: center;
+
+                padding: 120px 20px 50px;
+            }
+
+            .home-content h3 {
+                font-size: 25px;
+            }
+
+            .home-content h1 {
+                font-size: 42px;
+            }
+
+            .home-content p {
+                font-size: 18px;
+            }
+
+            .home-img {
+                width: 250px;
+                height: 250px;
+
+                margin-top: 40px;
+            }
+
+
+            /* EXPERIENCES */
+
+            .experience {
+                padding: 80px 10%;
+            }
+
+            .experience h1 {
+                font-size: 32px;
+                margin-bottom: 50px;
+            }
+
+            .experience-box {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .experience-box::before {
+                width: 2px;
+                height: 100%;
+
+                left: 5px;
+                top: 0;
+            }
+
+            .experience-item {
+                width: 100%;
+
+                padding-top: 0;
+                padding-left: 30px;
+            }
+
+            .experience-item::before {
+                left: 0;
+                top: 5px;
+            }
+
+
+            /* FOOTER */
+
+            .footer {
+                flex-wrap: wrap;
+
+                gap: 30px;
+
+                padding: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+            Rijuana's Portfolio
+        </a>
+
+        <nav class="navbar">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#about">Services</a>
+
+            <a href="#about">Projects</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h3>
+                Hi, I'm
+            </h3>
+
+            <h1>
+                <span class="purple">Rijuana</span>
+            </h1>
+
+            <p>
+                I'm a student.
+            </p>
+
+        </div>
+
+
+        <!-- MY PHOTO -->
+
+        <div class="home-img">
+
+            <img src="images/Passport Photo 2.PNG" alt="Rijuana">
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCES
+    ========================= -->
+
+    <section class="experience" id="about">
+
+        <span>
+            What I have done so far
+        </span>
+
+        <h1>
+            Experiences
+        </h1>
+
+
+        <div class="experience-box">
+
+
+            <!-- EXPERIENCE 1 -->
+
+            <div class="experience-item">
+
+                <h2>
+                    Graduation
+                </h2>
+
+                <p>
+                    Graduation (2021-2024)
+                </p>
+
+                <p>
+                    Completed my graduation from SNU University
+                    with a degree in Accounting and Finance.
+                </p>
+
+            </div>
+
+
+            <!-- EXPERIENCE 2 -->
+
+            <div class="experience-item">
+
+                <h2>
+                    Post Graduation
+                </h2>
+
+                <p>
+                    Currently pursuing M.C.A degree
+                </p>
+
+                <p>
+                    From SRM Institute of Science and Technology.
+                </p>
+
+            </div>
+
+
+            <!-- EXPERIENCE 3 -->
+
+            <div class="experience-item">
+
+                <h2>
+                    Internship
+                </h2>
+
+                <p>
+                    Working as a Software Intern
+                    at Nexova Techwork Pvt. Ltd.
+                </p>
+
+                <p>
+                    Developing software applications and
+                    working with modern web technologies.
+                </p>
+
+            </div>
+
+
+            <!-- EXPERIENCE 4 -->
+
+            <div class="experience-item">
+
+                <h2>
+                    Web Developer
+                </h2>
+
+                <p>
+                    Web Developer
+                </p>
+
+                <p>
+                    Built responsive and user-friendly
+                    websites using modern development tools.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer id="contact">
+
+        <div class="footer">
+
+
+            <!-- FOOTER LOGO -->
+
+            <div class="footer-first">
+
+                <h3>
+                    Rijuana's Portfolio
+                </h3>
+
+            </div>
+
+
+            <!-- FOOTER LINKS -->
+
+            <div class="footer-second">
+
+                <ul>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- FOOTER SERVICES -->
+
+            <div class="footer-third">
+
+                <ul>
+
+                    <li>
+                        <a href="#about">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-rights">
+
+            <p>
+                © 2026 Rijuana Hossain. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

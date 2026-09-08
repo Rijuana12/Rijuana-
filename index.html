@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,26 +53,16 @@
             background: transparent;
 
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
 
             z-index: 100;
         }
 
 
-        /* LOGO */
-
-        .logo {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-
-            font-size: 25px;
-            font-weight: 700;
-        }
-
-
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         .navbar a {
             display: inline-block;
@@ -119,7 +108,9 @@
         }
 
 
-        /* HOME CONTENT */
+        /* =========================
+           HOME CONTENT
+        ========================= */
 
         .home-content {
             max-width: 600px;
@@ -140,29 +131,43 @@
             font-size: 22px;
             margin-top: 20px;
         }
-/* HOME IMAGE */
 
-.home-img {
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.home-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #b986ea;
-    box-shadow: 0 0 30px rgba(185, 134, 234, 0.5);
-}
-
-        /* PURPLE TEXT */
+        /* =========================
+           PURPLE TEXT
+        ========================= */
 
         .purple {
             color: #b986ea;
+        }
+
+
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
+
+        .home-img {
+            width: 400px;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-shrink: 0;
+        }
+
+        .home-img img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid #b986ea;
+
+            box-shadow: 0 0 30px rgba(185, 134, 234, 0.5);
         }
 
 
@@ -184,12 +189,15 @@
 
         .experience h1 {
             font-size: 40px;
+
             margin-top: 10px;
             margin-bottom: 80px;
         }
 
 
-        /* EXPERIENCE BOX */
+        /* =========================
+           EXPERIENCE BOX
+        ========================= */
 
         .experience-box {
             position: relative;
@@ -199,7 +207,9 @@
         }
 
 
-        /* HORIZONTAL LINE */
+        /* =========================
+           HORIZONTAL LINE
+        ========================= */
 
         .experience-box::before {
             content: "";
@@ -216,17 +226,22 @@
         }
 
 
-        /* EXPERIENCE ITEM */
+        /* =========================
+           EXPERIENCE ITEM
+        ========================= */
 
         .experience-item {
             position: relative;
 
             width: 22%;
+
             padding-top: 35px;
         }
 
 
-        /* CIRCLE */
+        /* =========================
+           CIRCLE
+        ========================= */
 
         .experience-item::before {
             content: "";
@@ -245,7 +260,9 @@
         }
 
 
-        /* EXPERIENCE TITLE */
+        /* =========================
+           EXPERIENCE TITLE
+        ========================= */
 
         .experience-item h2 {
             font-size: 18px;
@@ -253,7 +270,9 @@
         }
 
 
-        /* EXPERIENCE TEXT */
+        /* =========================
+           EXPERIENCE TEXT
+        ========================= */
 
         .experience-item p {
             color: gray;
@@ -327,7 +346,10 @@
             .header {
                 padding: 20px;
 
+                justify-content: center;
+
                 flex-direction: column;
+
                 gap: 15px;
             }
 
@@ -337,6 +359,7 @@
 
             .navbar a {
                 font-size: 13px;
+
                 margin-left: 10px;
                 margin-right: 10px;
             }
@@ -345,11 +368,13 @@
             /* HOME */
 
             .home {
+                flex-direction: column;
+
                 justify-content: center;
 
                 text-align: center;
 
-                padding: 100px 20px 0;
+                padding: 120px 20px 50px;
             }
 
             .home-content h3 {
@@ -365,6 +390,16 @@
             }
 
 
+            /* PROFILE PHOTO */
+
+            .home-img {
+                width: 250px;
+                height: 250px;
+
+                margin-top: 40px;
+            }
+
+
             /* EXPERIENCES */
 
             .experience {
@@ -373,11 +408,13 @@
 
             .experience h1 {
                 font-size: 32px;
+
                 margin-bottom: 50px;
             }
 
             .experience-box {
                 flex-direction: column;
+
                 gap: 50px;
             }
 
@@ -414,6 +451,7 @@
         }
 
     </style>
+
 </head>
 
 
@@ -425,10 +463,6 @@
     ========================= -->
 
     <header class="header">
-
-        <a href="#home" class="logo">
-            Rijuana's Portfolio
-        </a>
 
         <nav class="navbar">
 
@@ -447,36 +481,42 @@
     </header>
 
 
+
     <!-- =========================
          HOME
     ========================= -->
 
-   <!-- =========================
-     HOME
-========================= -->
+    <section class="home" id="home">
 
-<section class="home" id="home">
+        <div class="home-content">
 
-    <div class="home-content">
+            <h3>
+                Hi, I'm
+            </h3>
 
-        <h3>
-            Hi, I'm
-        </h3>
+            <h1>
+                <span class="purple">Rijuana</span>
+            </h1>
 
-        <h1>
-            <span class="purple">Rijuana</span>
-        </h1>
+            <p>
+                I'm a student.
+            </p>
 
-        <p>
-            I'm a student.
-        </p>
+        </div>
 
-    </div>
 
-   <div class="home-img">
-    <img src="Passport Photo 2.PNG" alt="Rijuana">
-</div>
-</section>
+        <!-- PROFILE PHOTO -->
+
+        <div class="home-img">
+
+            <img src="Passport Photo 2.PNG" alt="Rijuana">
+
+        </div>
+
+    </section>
+
+
+
     <!-- =========================
          EXPERIENCES
     ========================= -->
@@ -515,6 +555,7 @@
             </div>
 
 
+
             <!-- EXPERIENCE 2 -->
 
             <div class="experience-item">
@@ -532,6 +573,7 @@
                 </p>
 
             </div>
+
 
 
             <!-- EXPERIENCE 3 -->
@@ -553,6 +595,7 @@
                 </p>
 
             </div>
+
 
 
             <!-- EXPERIENCE 4 -->
@@ -580,11 +623,13 @@
     </section>
 
 
+
     <!-- =========================
          FOOTER
     ========================= -->
 
     <footer id="contact">
+
 
         <div class="footer">
 
@@ -598,6 +643,7 @@
                 </h3>
 
             </div>
+
 
 
             <!-- FOOTER LINKS -->
@@ -621,6 +667,7 @@
                 </ul>
 
             </div>
+
 
 
             <!-- FOOTER SERVICES -->
@@ -649,6 +696,7 @@
         </div>
 
 
+
         <!-- COPYRIGHT -->
 
         <div class="footer-rights">
@@ -659,10 +707,10 @@
 
         </div>
 
+
     </footer>
 
 
 </body>
 
 </html>
-```

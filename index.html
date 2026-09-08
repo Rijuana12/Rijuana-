@@ -104,7 +104,8 @@
 
             background: linear-gradient(
                 90deg,
-                #b565d9,
+                #9b5de5,
+                #f15bb5,
                 #ff6f91,
                 #ffb86c
             );
@@ -115,7 +116,7 @@
         }
 
         .navbar a:hover {
-            color: #b565d9;
+            color: #9b5de5;
         }
 
         .navbar a:hover::after {
@@ -220,11 +221,13 @@
             color: #333;
 
             font-weight: 400;
+
+            line-height: 1.6;
         }
 
 
         /* =========================
-           SMALL DECORATION
+           COLOURFUL DECORATION
         ========================= */
 
         .line {
@@ -244,6 +247,21 @@
                 #ff6f91,
                 #fca311
             );
+
+            animation: lineAnimation 3s ease-in-out infinite alternate;
+        }
+
+
+        @keyframes lineAnimation {
+
+            from {
+                width: 70px;
+            }
+
+            to {
+                width: 130px;
+            }
+
         }
 
 
@@ -667,13 +685,20 @@
 
         <nav class="navbar">
 
-            <a href="#about">About Me</a>
+            <a href="#about">
+                About Me
+            </a>
 
-            <a href="#contact">Contact Me</a>
+            <a href="#contact">
+                Contact Me
+            </a>
 
-            <a href="Rijuana-Hossain-Resume.pdf"
-               target="_blank">
+            <a
+                href="Rijuana Hossain CV 3.pdf"
+                target="_blank">
+
                 My Resume
+
             </a>
 
         </nav>
@@ -710,7 +735,7 @@
 
 
 
-        <!-- PHOTO -->
+        <!-- PROFILE PHOTO -->
 
         <div class="home-img">
 
@@ -787,8 +812,7 @@
             <div class="experience-card">
 
                 <h2>
-                    Internship
-                </h2>
+                    Internship</h2>
 
                 <h3>
                     Software Intern
@@ -816,9 +840,8 @@
                 </h3>
 
                 <p>
-                    Successfully completed the AWS Academy
-                    Data Engineering training and earned
-                    the training badge.
+                    AWS Academy Graduate - Data Engineering -
+                    Training Badge.
                 </p>
 
             </div>
@@ -888,7 +911,7 @@
         <!-- RESUME -->
 
         <a
-            href="Rijuana-Hossain-Resume.pdf"
+            href="Rijuana Hossain CV 3.pdf"
             target="_blank"
             class="resume-btn">
 
